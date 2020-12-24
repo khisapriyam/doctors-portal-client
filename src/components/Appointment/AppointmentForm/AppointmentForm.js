@@ -28,7 +28,7 @@ const AppointmentFrom = ({ modalIsOpen, closeModal, appointmentOn,date}) => {
         data.date = date;
         data.created = new Date();
 
-        fetch('http://localhost:5000/addAppointment',{
+        fetch('https://serene-journey-90528.herokuapp.com/addAppointment',{
             method: 'POST',
             headers: {'content-type': 'application/json'},
             body: JSON.stringify(data)
@@ -90,8 +90,6 @@ const AppointmentFrom = ({ modalIsOpen, closeModal, appointmentOn,date}) => {
 
                     <div className="form-group text-right">
                         <button type="submit" className="btn btn-brand"><Link to="/dashboard/appointment" onClick={() =>setLoggedInUser({})}></Link>Send</button>
-                        {/* <Link to="/dashboard/appointment" className="text-white"><button type="submit" className="btn btn-brand"onClick={() =>dashboardNavigation()}><span>Send</span></button> </Link> */}
-                        {/* <button type="submit" className="btn btn-brand" onClick={() =>dashboardNavigation()}><span>Send</span></button> */}
                     </div>
                 </form>
             </Modal>

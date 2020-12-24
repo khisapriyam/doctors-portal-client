@@ -18,7 +18,7 @@ const Dashboard = () => {
     }
 
     useEffect( () => {
-        fetch('http://localhost:5000/appointmentsByDate', {
+        fetch('https://serene-journey-90528.herokuapp.com/appointmentsByDate', {
             method: 'POST',
             headers: {'content-type': 'application/json'},
             body: JSON.stringify({date: selectedDate})
